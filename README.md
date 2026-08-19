@@ -9,8 +9,10 @@
 ```
 .
 ├── index.html      수업 허브 (18주 목록)
-└── week01/
-    └── index.html  1주차 프레젠테이션 (51장)
+├── week01/
+│   └── index.html  1주차 · 이미지의 정체 (51장)
+└── week02/
+    └── index.html  2주차 · 컬러와 문서 규격 (51장)
 ```
 
 ## 프레젠테이션 조작키
@@ -25,19 +27,21 @@
 
 ## 주차별 자료 추가하는 법
 
-1. `week02` 같은 폴더를 새로 만듭니다
+1. `week03` 같은 폴더를 새로 만듭니다
 2. 그 안에 프레젠테이션 파일을 `index.html` 이름으로 넣습니다
 3. `index.html`(허브)에서 해당 주차 카드를 아래와 같이 바꿉니다
 
 ```html
 <!-- 준비 중 → 공개 -->
-<a class="wk ready" href="week02/">
-  <span class="no">WEEK 02</span>
-  <h3>컬러와 문서 규격</h3>
-  <p>RGB / CMYK / HSB · 증명사진 만들기</p>
+<a class="wk ready" href="week03/">
+  <span class="no">WEEK 03</span>
+  <h3>선택과 누끼 ①</h3>
+  <p>선택 도구 · 배경 지우고 바꾸기</p>
   <span class="badge">수업자료 공개</span>
 </a>
 ```
 
-`<div class="wk soon">` 를 `<a class="wk ready" href="week02/">` 로 바꾸고,
+`<div class="wk soon">` 를 `<a class="wk ready" href="weekNN/">` 로 바꾸고,
 마지막 배지 문구를 `수업자료 공개` 로 고치면 됩니다.
+
+> 닫는 태그도 `</div>` 에서 `</a>` 로 바꿔야 합니다.
