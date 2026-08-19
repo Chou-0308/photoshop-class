@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>컴퓨터그래픽 · 포토샵 수업 | 2학년 영상콘텐츠과</title>
+<meta name="description" content="고등학교 2학년 영상콘텐츠과 컴퓨터그래픽(포토샵) 18주 수업 자료">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f6f8fc; --card:#fff; --ink:#12151c; --sub:#5b6472; --line:#e3e8f0;
+  --accent:#1d4ed8; --accent-soft:#e8effd; --star:#e11d48;
+}
+body{
+  font-family:'Pretendard Variable',Pretendard,'Apple SD Gothic Neo','Malgun Gothic',
+   system-ui,sans-serif;
+  background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ── header ── */
+header{background:#0d1220;color:#fff;padding:76px 0 68px;position:relative;overflow:hidden}
+header::after{content:'';position:absolute;right:-140px;top:-120px;width:460px;height:460px;
+  background:radial-gradient(circle,rgba(45,110,255,.34),transparent 62%)}
+.kicker{display:inline-block;font-size:13px;letter-spacing:2.5px;color:#8fb0ff;
+  border:1px solid rgba(143,176,255,.4);border-radius:999px;padding:7px 18px;margin-bottom:24px}
+header h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-1.8px;line-height:1.14}
+header p{margin-top:18px;font-size:clamp(15px,2.4vw,19px);color:#aab5c6;max-width:640px}
+.meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+.meta span{font-size:13px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:8px 14px;color:#cbd5e1}
+
+/* ── intro ── */
+.intro{margin-top:-34px;position:relative;z-index:2}
+.introbox{background:var(--card);border-radius:18px;padding:30px 34px;
+  box-shadow:0 12px 34px rgba(16,26,52,.10);border:1px solid var(--line)}
+.introbox strong{color:var(--accent)}
+.introbox p{font-size:16px;color:var(--sub)}
+.introbox p+p{margin-top:10px}
+
+/* ── section ── */
+h2{font-size:15px;letter-spacing:1.6px;color:var(--sub);font-weight:700;
+  margin:52px 0 16px;display:flex;align-items:center;gap:12px}
+h2::after{content:'';flex:1;height:1px;background:var(--line)}
+
+/* ── week cards ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
+.wk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+  display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;
+  transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;position:relative}
+.wk .no{font-size:12px;font-weight:800;letter-spacing:1.4px;color:var(--sub)}
+.wk h3{font-size:18px;font-weight:700;letter-spacing:-.4px;line-height:1.35}
+.wk p{font-size:13.5px;color:var(--sub);line-height:1.5}
+.wk .badge{margin-top:4px;align-self:flex-start;font-size:11.5px;font-weight:700;
+  padding:4px 10px;border-radius:6px;letter-spacing:.4px}
+
+.wk.ready{border-color:#c3d4fb;background:linear-gradient(180deg,#fff, #fbfcff)}
+.wk.ready:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(29,78,216,.16);
+  border-color:var(--accent)}
+.wk.ready .no{color:var(--accent)}
+.wk.ready .badge{background:var(--accent-soft);color:var(--accent)}
+.wk.ready::after{content:'→';position:absolute;right:20px;top:18px;font-size:19px;
+  color:var(--accent);opacity:.35;transition:opacity .16s, transform .16s}
+.wk.ready:hover::after{opacity:1;transform:translateX(3px)}
+
+.wk.soon{opacity:.62;cursor:default}
+.wk.soon .badge{background:#eef0f4;color:#8a93a2}
+
+.wk.exam{border-left:4px solid var(--star)}
+.wk.exam .no{color:var(--star)}
+
+/* ── eval ── */
+.eval{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.ev b{display:block;font-size:13px;color:var(--sub);letter-spacing:.6px}
+.ev strong{display:block;font-size:32px;font-weight:800;color:var(--accent);margin:6px 0 8px;
+  letter-spacing:-1px}
+.ev p{font-size:13.5px;color:var(--sub);line-height:1.5}
+
+/* ── footer ── */
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--line);
+  font-size:13px;color:#8a93a2;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+footer a{color:var(--sub)}
+
+@media (max-width:640px){
+  header{padding:56px 0 54px}
+  .introbox{padding:24px}
+  h2{margin:40px 0 14px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">2학년 영상콘텐츠과 · 전공 실기</span>
+    <h1>컴퓨터그래픽<br>포토샵 수업</h1>
+    <p>전공자가 아니어도, 회사에서 이미지 파일을 제대로 다루는 사람이 되는 것 — 18주 과정</p>
+    <div class="meta">
+      <span>주 2차시 연강 · 총 36차시</span>
+      <span>Adobe Photoshop</span>
+      <span>수행평가 2회 + 과정평가</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap intro">
+  <div class="introbox">
+    <p>이 수업은 <strong>그림을 그리는 기술이 아니라 고치고 다루는 기술</strong>을 배웁니다.</p>
+    <p>앞부분은 있는 사진을 쓸 만하게 만드는 법, 뒷부분은 없는 것을 합성해 만드는 법,
+       마지막은 영화 홍보 세트를 직접 제작하는 프로젝트입니다.
+       매 차시 산출물은 <strong>전공 결과물 하나 + 사무 활용 하나</strong>로 짝을 이룹니다.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <h2>1부 · 기초 — 파일을 제대로 다루기</h2>
+  <div class="grid">
+    <a class="wk ready" href="week01/">
+      <span class="no">WEEK 01</span>
+      <h3>오리엔테이션 + 이미지의 정체</h3>
+      <p>래스터와 벡터 · 해상도(ppi) · 파일 포맷 5종</p>
+      <span class="badge">수업자료 공개</span>
+    </a>
+    <div class="wk soon">
+      <span class="no">WEEK 02</span>
+      <h3>컬러와 문서 규격</h3>
+      <p>RGB / CMYK / HSB · 증명사진 만들기</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 03</span>
+      <h3>선택과 누끼 ①</h3>
+      <p>선택 도구 · 배경 지우고 바꾸기</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>2부 · 보정 — 있는 사진을 쓸 만하게</h2>
+  <div class="grid">
+    <div class="wk soon">
+      <span class="no">WEEK 04</span>
+      <h3>레이어와 비파괴 보정</h3>
+      <p>조정 레이어 · 레벨 · 커브 · 화이트밸런스</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 05</span>
+      <h3>리터칭 — 지우고 되살리기</h3>
+      <p>스팟 힐링 · 패치 · 내용 인식 채우기</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 06</span>
+      <h3>마무리 보정 + 자동화</h3>
+      <p>샤프닝 · 액션 녹화 · 일괄 처리</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>3부 · 1차 수행평가</h2>
+  <div class="grid">
+    <div class="wk soon">
+      <span class="no">WEEK 07</span>
+      <h3>수행평가 대비 실전 연습</h3>
+      <p>채점 기준 공개 · 제출 규격 리허설</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon exam">
+      <span class="no">WEEK 08 · 수행평가</span>
+      <h3>1차 수행평가 — 사진 보정</h3>
+      <p>촬영 + 보정 4컷 제출 · 40점</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>4부 · 합성과 편집 — 만들어내는 단계</h2>
+  <div class="grid">
+    <div class="wk soon">
+      <span class="no">WEEK 09</span>
+      <h3>레이어 마스크 & 클리핑 마스크</h3>
+      <p>지우개 대신 마스크를 쓰는 이유</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 10</span>
+      <h3>펜툴 정밀 누끼</h3>
+      <p>패스 개념 · 제품과 로고 따내기</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 11</span>
+      <h3>문자와 저작권</h3>
+      <p>타이포그래피 · 폰트 라이선스 · 이미지 저작권</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 12</span>
+      <h3>블렌딩 모드 & 레이어 스타일</h3>
+      <p>그림자 · 색과 톤 통일</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 13</span>
+      <h3>스마트 오브젝트 & 목업</h3>
+      <p>명함 · 머그컵 · 현수막 목업 적용</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>5부 · 프로젝트 & 2차 수행평가</h2>
+  <div class="grid">
+    <div class="wk soon">
+      <span class="no">WEEK 14</span>
+      <h3>프로젝트 기획 + 실무 규격</h3>
+      <p>SNS 규격 · 카드뉴스 문법 · 기획서 작성</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 15</span>
+      <h3>제작 ① 촬영과 소재</h3>
+      <p>원본 촬영 · 누끼 · 시안 1안</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon">
+      <span class="no">WEEK 16</span>
+      <h3>제작 ② 포스터 완성</h3>
+      <p>타이포 · 색 보정 · 중간 피드백</p>
+      <span class="badge">준비 중</span>
+    </div>
+    <div class="wk soon exam">
+      <span class="no">WEEK 17 · 수행평가</span>
+      <h3>2차 수행평가 — 영화 홍보 세트</h3>
+      <p>포스터 + 카드뉴스 5컷 + PSD · 40점</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>6부 · 마무리</h2>
+  <div class="grid">
+    <div class="wk soon">
+      <span class="no">WEEK 18</span>
+      <h3>발표 · 상호평가 · 정리</h3>
+      <p>작품 상영 · PSD 정리 규칙 · 포트폴리오</p>
+      <span class="badge">준비 중</span>
+    </div>
+  </div>
+
+  <h2>평가 구조</h2>
+  <div class="eval">
+    <div class="ev"><b>과정평가</b><strong>20점</strong>
+      <p>매주 실습 제출 12회<br>상위 10회만 반영</p></div>
+    <div class="ev"><b>1차 수행평가</b><strong>40점</strong>
+      <p>8주차 · 사진 보정 4컷</p></div>
+    <div class="ev"><b>2차 수행평가</b><strong>40점</strong>
+      <p>17주차 · 포스터 + 카드뉴스</p></div>
+    <div class="ev"><b>지필고사</b><strong>없음</strong>
+      <p>대신 매시간 무언가를 제출합니다</p></div>
+  </div>
+
+</main>
+
+<footer class="wrap">
+  <span>컴퓨터그래픽 · 2학년 영상콘텐츠과 수업 자료</span>
+  <span>최종 업데이트 2026-08-19</span>
+</footer>
+
+</body>
+</html>
