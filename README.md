@@ -13,6 +13,8 @@
 │   └── index.html      1주차 · 이미지의 정체 (51장)
 ├── week02/
 │   └── index.html      2주차 · 컬러와 문서 규격 (51장)
+├── week03/
+│   └── index.html      3주차 · 선택과 누끼 (47장)
 ├── 올리기.command      macOS 업로드 (더블클릭)
 └── 올리기.bat          Windows 업로드 (더블클릭)
 ```
