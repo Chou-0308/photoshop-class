@@ -15,6 +15,8 @@
 │   └── index.html      2주차 · 컬러와 문서 규격 (51장)
 ├── week03/
 │   └── index.html      3주차 · 선택과 누끼 (47장)
+├── week04/
+│   └── index.html      4주차 · 레이어와 비파괴 보정 (48장)
 ├── 올리기.command      macOS 업로드 (더블클릭)
 └── 올리기.bat          Windows 업로드 (더블클릭)
 ```
