@@ -9,14 +9,16 @@
 ```
 .
 ├── index.html          수업 허브 (18주 목록)
-├── week01/
-│   └── index.html      1주차 · 이미지의 정체 (51장)
-├── week02/
-│   └── index.html      2주차 · 컬러와 문서 규격 (51장)
-├── week03/
-│   └── index.html      3주차 · 선택과 누끼 (47장)
-├── week04/
-│   └── index.html      4주차 · 레이어와 비파괴 보정 (48장)
+├── week01/index.html   1주차 · 이미지의 정체
+├── week02/index.html   2주차 · 컬러와 문서 규격
+├── week03/index.html   3주차 · 선택과 누끼
+├── week04/index.html   4주차 · 레이어와 비파괴 보정
+├── week05/index.html   5주차 · 지우고 가리기
+├── week06/index.html   6주차 · Camera Raw와 화이트밸런스
+├── week07/index.html   7주차 · 공개수업 「애니 배경 만들기」 (자료 준비 중)
+├── week08/index.html   8주차 · 문자와 저작권 (준비 중)
+├── week09/index.html   9주차 · 수행평가 대비 실전 연습
+├── week10/index.html   10주차 · 1차 수행평가
 ├── 올리기.command      macOS 업로드 (더블클릭)
 └── 올리기.bat          Windows 업로드 (더블클릭)
 ```
