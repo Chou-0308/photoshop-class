@@ -15,7 +15,7 @@
 ├── week04/index.html   4주차 · 레이어와 비파괴 보정
 ├── week05/index.html   5주차 · 지우고 가리기
 ├── week06/index.html   6주차 · Camera Raw와 화이트밸런스
-├── week07/index.html   7주차 · 공개수업 「애니메이션 배경 만들기」 (1시간 · 28장)
+├── week07/index.html   7주차 · 공개수업 「애니메이션 영화 포스터 만들기」 — 첨성대 실사 + AI (1시간 · 30장)
 ├── week08/index.html   8주차 · 문자와 저작권 (준비 중)
 ├── week09/index.html   9주차 · 수행평가 대비 실전 연습
 ├── week10/index.html   10주차 · 1차 수행평가
