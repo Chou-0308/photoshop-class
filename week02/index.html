@@ -291,10 +291,10 @@ const stage=document.getElementById('stage');
 const slides=[...document.querySelectorAll('.slide')];
 let cur=0;
 function fit(){
-  const vw=(window.visualViewport&&visualViewport.width)||document.documentElement.clientWidth||innerWidth,vh=(window.visualViewport&&visualViewport.height)||document.documentElement.clientHeight||innerHeight;const s=Math.min(vw/1600, vh/900);
+  const vw=document.documentElement.clientWidth||innerWidth,vh=document.documentElement.clientHeight||innerHeight;const s=Math.min(vw/1600, vh/900);
   stage.style.transform=`translate(-50%,-50%) scale(${s})`;
 }
-addEventListener('resize',fit); addEventListener('orientationchange',()=>setTimeout(fit,200));if(window.visualViewport)visualViewport.addEventListener('resize',fit); fit();
+addEventListener('resize',()=>{if(!window.visualViewport||visualViewport.scale<1.02)fit();}); addEventListener('orientationchange',()=>setTimeout(fit,250)); fit();
 function show(i){
   cur=Math.max(0,Math.min(slides.length-1,i));
   slides.forEach((s,j)=>s.classList.toggle('on',j===cur));
@@ -323,8 +323,10 @@ slides.forEach((s,i)=>{
   g.appendChild(d);
 });
 let tx=0,ty=0,tt=0;
-addEventListener('touchstart',e=>{const p=e.changedTouches[0];tx=p.clientX;ty=p.clientY;tt=Date.now();},{passive:true});
-addEventListener('touchend',e=>{const p=e.changedTouches[0],d=p.clientX-tx,dy=p.clientY-ty;
+let multi=false;const zoomed=()=>!!(window.visualViewport&&visualViewport.scale>1.02);
+addEventListener('touchstart',e=>{const p=e.changedTouches[0];if(e.touches.length===1){multi=false;tx=p.clientX;ty=p.clientY;tt=Date.now();}else multi=true;},{passive:true});
+addEventListener('touchend',e=>{if(multi||e.touches.length||zoomed())return;                /* 두 손가락 · 확대 중엔 넘기지 않음 */
+  const p=e.changedTouches[0],d=p.clientX-tx,dy=p.clientY-ty;
   if(Math.abs(d)>60&&Math.abs(d)>Math.abs(dy)){show(cur+(d<0?1:-1));return;}           /* 스와이프 */
   if(Math.abs(d)<12&&Math.abs(dy)<12&&Date.now()-tt<500){                              /* 탭 */
     if(e.target.closest('a,button,.timer,#ov,#notes,.blank'))return;                   /* 버튼 · 타이머 · 목차는 그대로 */
