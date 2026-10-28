@@ -16,7 +16,7 @@
 ├── week05/index.html   5주차 · 지우고 가리기
 ├── week06/index.html   6주차 · Camera Raw와 화이트밸런스
 ├── week07/index.html   7주차 · 공개수업 「애니메이션 영화 포스터 만들기」 — 첨성대 실사 + AI (1시간 · 30장)
-├── week08/index.html   8주차 · 문자와 저작권 (준비 중)
+├── week08/index.html   8주차 · 문자와 저작권
 ├── week09/index.html   9주차 · 수행평가 대비 실전 연습
 ├── week10/index.html   10주차 · 1차 수행평가
 ├── 올리기.command      macOS 업로드 (더블클릭)
